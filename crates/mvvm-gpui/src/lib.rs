@@ -1,7 +1,7 @@
 //! GPUI runtime adapter. GPUI-specific types are deliberately confined here.
 
 use std::future::Future;
-use gpui_kit::{AsyncApp, Context, Task, WeakEntity};
+use gpui_kit::{AppContext, AsyncApp, Context, Task, WeakEntity};
 
 pub use mvvm_core::{ActivationState, Activatable, Command, CommandError, Memo, Owner, ReadOnlyState, State, Unit, ViewModel};
 
