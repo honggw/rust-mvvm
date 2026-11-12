@@ -1,0 +1,10 @@
+[package]
+name = "mvvm-gpui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+mvvm-core = { path = "../mvvm-core" }
+gpui-kit.workspace = true

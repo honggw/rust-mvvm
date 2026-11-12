@@ -1,0 +1,11 @@
+[package]
+name = "todo-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+gpui-kit.workspace = true
+mvvm-core = { path = "../../crates/mvvm-core" }
+mvvm-gpui = { path = "../../crates/mvvm-gpui" }
