@@ -71,7 +71,7 @@ where
 
 /// A lazily evaluated, memoized derived value.
 #[derive(Clone, Debug)]
-pub struct Memo<T>(ArcMemo<T>);
+pub struct Memo<T: Clone + PartialEq + Send + Sync + 'static>(ArcMemo<T>);
 
 impl<T> Memo<T>
 where
@@ -99,7 +99,7 @@ impl Owner {
 
     /// Creates a detached root owner.
     pub fn new_root() -> Self {
-        Self(ReactiveOwner::new_root(None))
+        Self(ReactiveOwner::new())
     }
 
     pub fn with<R>(&self, f: impl FnOnce() -> R) -> R {
