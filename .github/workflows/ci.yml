@@ -2,10 +2,16 @@ name: CI
 
 on:
   push:
+    branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
+    name: Check and test workspace
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
